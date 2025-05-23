@@ -45,6 +45,11 @@ src/
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
+- `npm run deploy` - Deploy to GitHub Pages
+
+## Deployment
+
+This website is automatically deployed to GitHub Pages when changes are pushed to the main branch.
 
 ## License
 
