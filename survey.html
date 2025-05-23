@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey - Advancement Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .mobile-menu {
+        transition: transform 0.3s ease-in-out;
+      }
+      .mobile-menu.hidden {
+        transform: translateY(-100%);
+      }
+      .mobile-menu:not(.hidden) {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="text-2xl font-bold text-blue-600">
+              Advancement Strategy
+            </a>
+          </div>
+          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+            <a href="/services.html" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+            <a href="/about.html" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+            <a href="/blog.html" class="text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
+            <a href="/forum.html" class="text-gray-600 hover:text-blue-600 transition-colors">Forum</a>
+            <a href="/survey.html" class="text-blue-600 font-medium">Survey</a>
+            <a href="/contact.html" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button class="text-gray-600 hover:text-blue-600 transition-colors" onclick="toggleMobileMenu()">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md absolute w-full z-40">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+        <a href="/services.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+        <a href="/about.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">About</a>
+        <a href="/blog.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">Blog</a>
+        <a href="/forum.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">Forum</a>
+        <a href="/survey.html" class="block px-3 py-2 text-blue-600 font-medium">Survey</a>
+        <a href="/contact.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <div class="max-w-3xl mx-auto px-4 py-12">
+        <!-- Survey Header -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
+          <h1 class="text-3xl font-bold text-gray-900 mb-4">Customer Feedback Survey</h1>
+          <p class="text-gray-600">
+            Help us improve our services by sharing your thoughts and experiences. Your feedback is valuable to us.
+          </p>
+        </div>
+
+        <!-- Survey Form -->
+        <form class="bg-white rounded-lg shadow-md p-6">
+          <!-- Personal Information -->
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Personal Information</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Service Experience -->
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Service Experience</h2>
+            <div class="space-y-6">
+              <div>
+                <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Which service did you use?</label>
+                <select id="service" name="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                  <option value="">Select a service</option>
+                  <option value="strategy">Strategic Planning</option>
+                  <option value="optimization">Business Optimization</option>
+                  <option value="growth">Growth Acceleration</option>
+                  <option value="digital">Digital Transformation</option>
+                </select>
+              </div>
+              <div>
+                <label for="satisfaction" class="block text-sm font-medium text-gray-700 mb-1">How satisfied were you with our service?</label>
+                <select id="satisfaction" name="satisfaction" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                  <option value="">Select your satisfaction level</option>
+                  <option value="very-satisfied">Very Satisfied</option>
+                  <option value="satisfied">Satisfied</option>
+                  <option value="neutral">Neutral</option>
+                  <option value="dissatisfied">Dissatisfied</option>
+                  <option value="very-dissatisfied">Very Dissatisfied</option>
+                </select>
+              </div>
+              <div>
+                <label for="recommend" class="block text-sm font-medium text-gray-700 mb-1">Would you recommend our services to others?</label>
+                <select id="recommend" name="recommend" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                  <option value="">Select your recommendation</option>
+                  <option value="definitely">Definitely</option>
+                  <option value="probably">Probably</option>
+                  <option value="maybe">Maybe</option>
+                  <option value="probably-not">Probably Not</option>
+                  <option value="definitely-not">Definitely Not</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feedback -->
+          <div class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Additional Feedback</h2>
+            <div class="space-y-6">
+              <div>
+                <label for="feedback" class="block text-sm font-medium text-gray-700 mb-1">What did you like most about our service?</label>
+                <textarea id="feedback" name="feedback" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+              </div>
+              <div>
+                <label for="improvements" class="block text-sm font-medium text-gray-700 mb-1">What could we improve?</label>
+                <textarea id="improvements" name="improvements" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex justify-end">
+            <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Submit Survey
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Advancement Strategy</h3>
+            <p class="text-gray-400">
+              Empowering businesses through strategic solutions and innovative thinking.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="/" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+              <li><a href="/services.html" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+              <li><a href="/about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+              <li><a href="/blog.html" class="text-gray-400 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="/forum.html" class="text-gray-400 hover:text-white transition-colors">Forum</a></li>
+              <li><a href="/survey.html" class="text-gray-400 hover:text-white transition-colors">Survey</a></li>
+              <li><a href="/contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Contact</h4>
+            <ul class="space-y-2 text-gray-400">
+              <li>info@advancementstrategy.com</li>
+              <li>+1 (555) 123-4567</li>
+              <li>123 Business Avenue</li>
+              <li>New York, NY 10001</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold mb-4">Follow Us</h4>
+            <div class="flex space-x-4">
+              <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+          <p>&copy; 2024 Advancement Strategy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
+  </body>
+</html> 
