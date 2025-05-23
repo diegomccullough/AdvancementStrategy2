@@ -2,12 +2,104 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advancement Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="/" class="text-2xl font-bold text-blue-600">
+              Advancement Strategy
+            </a>
+          </div>
+          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-gray-600 hover:text-blue-600 transition-colors">Home</a>
+            <a href="/services.html" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+            <a href="/about.html" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+            <a href="/contact.html" class="text-gray-600 hover:text-blue-600 transition-colors">Contact</a>
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button class="text-gray-600 hover:text-blue-600" onclick="toggleMobileMenu()">
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="/" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Home</a>
+        <a href="/services.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Services</a>
+        <a href="/about.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600">About</a>
+        <a href="/contact.html" class="block px-3 py-2 text-gray-600 hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+      <section class="mb-12">
+        <h1 class="text-5xl font-bold mb-6">Welcome to Advancement Strategy</h1>
+        <p class="text-xl text-gray-600 mb-8">
+          Empowering businesses to reach their full potential through strategic planning and innovative solutions.
+        </p>
+        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+          Get Started
+        </button>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-3xl font-semibold mb-6">Why Choose Us?</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">Expert Team</h3>
+            <p class="text-gray-600">
+              Our experienced professionals bring decades of industry expertise to every project.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">Proven Results</h3>
+            <p class="text-gray-600">
+              We've helped numerous businesses achieve their growth and optimization goals.
+            </p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-semibold mb-3">Tailored Solutions</h3>
+            <p class="text-gray-600">
+              Every strategy is customized to meet your unique business needs and objectives.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-semibold mb-6">Our Approach</h2>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <p class="text-gray-600 mb-4">
+            We believe in a collaborative approach, working closely with our clients to understand their challenges
+            and develop effective solutions. Our process is transparent, results-driven, and focused on your success.
+          </p>
+          <button class="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+            Learn More →
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
   </body>
 </html> 

@@ -1,38 +1,50 @@
 const Home = () => {
   return (
-    <div className="space-y-16">
-      {/* Hero Section */}
-      <section className="text-center py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-lg">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Advancing Your Business Strategy
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-          We help businesses transform their vision into reality through strategic planning and execution
+    <div className="max-w-4xl mx-auto">
+      <section className="mb-12">
+        <h1 className="text-5xl font-bold mb-6">Welcome to Advancement Strategy</h1>
+        <p className="text-xl text-gray-600 mb-8">
+          Empowering businesses to reach their full potential through strategic planning and innovative solutions.
         </p>
-        <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition-colors">
+        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
           Get Started
         </button>
       </section>
 
-      {/* Features Section */}
-      <section className="grid md:grid-cols-3 gap-8">
-        <div className="p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-xl font-semibold mb-4">Strategic Planning</h3>
-          <p className="text-gray-600">
-            Develop comprehensive strategies tailored to your business goals and market position
-          </p>
+      <section className="mb-12">
+        <h2 className="text-3xl font-semibold mb-6">Why Choose Us?</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-3">Expert Team</h3>
+            <p className="text-gray-600">
+              Our experienced professionals bring decades of industry expertise to every project.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-3">Proven Results</h3>
+            <p className="text-gray-600">
+              We've helped numerous businesses achieve their growth and optimization goals.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-3">Tailored Solutions</h3>
+            <p className="text-gray-600">
+              Every strategy is customized to meet your unique business needs and objectives.
+            </p>
+          </div>
         </div>
-        <div className="p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-xl font-semibold mb-4">Business Optimization</h3>
-          <p className="text-gray-600">
-            Streamline operations and improve efficiency across your organization
+      </section>
+
+      <section>
+        <h2 className="text-3xl font-semibold mb-6">Our Approach</h2>
+        <div className="bg-white p-6 rounded-lg shadow-md">
+          <p className="text-gray-600 mb-4">
+            We believe in a collaborative approach, working closely with our clients to understand their challenges
+            and develop effective solutions. Our process is transparent, results-driven, and focused on your success.
           </p>
-        </div>
-        <div className="p-6 bg-white rounded-lg shadow-md">
-          <h3 className="text-xl font-semibold mb-4">Growth Acceleration</h3>
-          <p className="text-gray-600">
-            Identify and capitalize on opportunities to scale your business
-          </p>
+          <button className="text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+            Learn More →
+          </button>
         </div>
       </section>
     </div>
