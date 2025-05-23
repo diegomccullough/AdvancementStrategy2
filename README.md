@@ -1,56 +1,15 @@
 # Advancement Strategy Website
 
-A modern web application for Advancement Strategy, built with React, TypeScript, and Tailwind CSS.
+This is a static website for Advancement Strategy, built with HTML and Tailwind CSS.
 
-## Prerequisites
+## Structure
+- `index.html` - Home page
+- `services.html` - Services page
+- `about.html` - About page
+- `contact.html` - Contact page
 
-- Node.js (v14 or higher)
-- npm (v6 or higher)
-
-## Getting Started
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open [http://localhost:5173](http://localhost:5173) in your browser
-
-## Features
-
-- Modern, responsive design
-- TypeScript for type safety
-- Tailwind CSS for styling
-- React Router for navigation
-- Component-based architecture
-
-## Project Structure
-
-```
-src/
-  ├── components/     # Reusable UI components
-  ├── pages/         # Page components
-  ├── App.tsx        # Main application component
-  ├── main.tsx       # Application entry point
-  └── index.css      # Global styles
-```
-
-## Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run deploy` - Deploy to GitHub Pages
+## Development
+This is a static site that uses Tailwind CSS via CDN. No build process is required.
 
 ## Deployment
-
-This website is automatically deployed to GitHub Pages when changes are pushed to the main branch.
-
-## License
-
-MIT
+This site is configured for deployment on Netlify as a static site.
