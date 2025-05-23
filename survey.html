@@ -74,7 +74,11 @@
         </div>
 
         <!-- Survey Form -->
-        <form class="bg-white rounded-lg shadow-md p-6">
+        <form class="bg-white rounded-lg shadow-md p-6" name="survey" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="survey" />
+          <div hidden>
+            <input name="bot-field" />
+          </div>
           <!-- Personal Information -->
           <div class="mb-8">
             <h2 class="text-xl font-semibold text-gray-900 mb-4">Personal Information</h2>
